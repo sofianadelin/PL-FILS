@@ -2,18 +2,16 @@ import java.util.Scanner;
 
 public class Ex4 {
     public static void main(String[] args) {
-        int n, m;
+        int n;
         Scanner scanner = new Scanner(System.in);
         n = scanner.nextInt();
-        m = scanner.nextInt();
 
         // n = linii
-        // m = coloane
 
         // i)
         for(int i = 1; i <= n; i++) {
             System.out.print('\n');
-            for(int j = 1; j <= m; j++)
+            for(int j = 1; j <= 10; j++)
                 System.out.print("*");
         }
         System.out.println();
