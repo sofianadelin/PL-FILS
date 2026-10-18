@@ -39,7 +39,7 @@ public class Matrices {
             for(int j = 0; j < 3; j++) {
                 multiplication[i][j] = 0;
                 for(int k = 0; k < 3; k++)
-                    multiplication[i][j] += (a[i][k] * a[k][j]);
+                    multiplication[i][j] += (a[i][k] * b[k][j]);
             }
 
         System.out.println("Product:");

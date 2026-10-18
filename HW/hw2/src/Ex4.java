@@ -1,17 +1,27 @@
+import java.util.Scanner;
+
 public class Ex4 {
     public static void main(String[] args) {
+        int n, m;
+        Scanner scanner = new Scanner(System.in);
+        n = scanner.nextInt();
+        m = scanner.nextInt();
+
+        // n = linii
+        // m = coloane
+
         // i)
-        for(int i = 1; i <= 4; i++) {
+        for(int i = 1; i <= n; i++) {
             System.out.print('\n');
-            for(int j = 1; j <= 10; j++)
+            for(int j = 1; j <= m; j++)
                 System.out.print("*");
         }
         System.out.println();
         System.out.println();
 
-        // i))
-        for(int i = 1; i <= 5; i++) {
-            for(int j = 1; j <= 5; j++) {
+        // ii)
+        for(int i = 1; i <= n; i++) {
+            for(int j = 1; j <= n; j++) {
                 if(i >= j)
                     System.out.print("*");
             }
@@ -21,9 +31,11 @@ public class Ex4 {
         System.out.println();
         System.out.println();
 
-        for(int i = 1; i <= 5; i++) {
-            for(int j = 1; j <= 5; j++) {
-                if(i + j >= 6)
+        // iii)
+
+        for(int i = 1; i <= n; i++) {
+            for(int j = 1; j <= n; j++) {
+                if(i + j >= n + 1)
                     System.out.print("*");
                 else System.out.print(" ");
             }
@@ -33,8 +45,41 @@ public class Ex4 {
         System.out.println();
         System.out.println();
 
-        // iii)
+        // iv)
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n - i - 1; j++)
+                System.out.print(" ");
+            for(int k = 0; k < 2 * i + 1; k++)
+                System.out.print("*");
+            System.out.println();
+        }
 
+        System.out.println();
+        System.out.println();
 
+        // v)
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n - i - 1; j++)
+                System.out.print(" ");
+            for(int k = 0; k < 2 * i + 1; k++)
+                System.out.print(i + 1);
+            System.out.println();
+        }
+
+        System.out.println();
+        System.out.println();
+
+        // vi)
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n - i - 1; j++)
+                System.out.print(" ");
+            int cnt = i + 1, direction = -1;
+            for(int k = 0; k < (2 * i + 1); k++){
+                System.out.print(cnt);
+                if(cnt == 1) direction = 1;
+                cnt += direction;
+            }
+            System.out.println();
+        }
     }
 }
