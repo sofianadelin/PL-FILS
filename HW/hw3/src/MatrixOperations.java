@@ -1,8 +1,4 @@
-public class Main {
-    public static double distance(double x1, double y1, double x2, double y2) {
-        return Math.sqrt(Math.pow(x1-x2,2) + Math.pow(y1-y2, 2));
-    }
-
+public class MatrixOperations {
     public static double[][] matrixAdd(double m1[][], double m2[][]) {
         int rows = m1.length;
         int cols = m1[0].length;
@@ -26,13 +22,10 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println(distance(0,0,4,5));
-
         double[][] res = matrixAdd(new double[][]{{1, 2}}, new double[][]{{3, 4}});
         System.out.println(res[0][0] + " " + res[0][1]);
 
         double sum = matrixDiagSum(new double[][]{{1.5, 2.0}, {3.0, 4.5}});
         System.out.println(sum);
-
     }
 }
