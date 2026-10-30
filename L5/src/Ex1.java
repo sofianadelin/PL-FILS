@@ -28,11 +28,10 @@ public class Ex1 {
 
     public static boolean allPrimeDivisors(int n) {
         boolean flag = true;
-        if (n <= 1) return false;
-
-        for (int d = 2; (long) d * d <= n; d++) {
+        if(n <= 1) return false;
+        for (int d = 2; (long) d <= n / 2; d++) {
             if (n % d == 0) {
-                return false;
+                if(!isPrime(d)) return false;
             }
         }
 
@@ -49,7 +48,7 @@ public class Ex1 {
         System.out.println();
 
         System.out.println(allPrimeDivisors(1));
-        System.out.println(allPrimeDivisors(12));
+        System.out.println(allPrimeDivisors(15));
         System.out.println(allPrimeDivisors(13));
     }
 }
