@@ -14,7 +14,7 @@ public class Ex2 {
 
         for(int i = 0; i < names.length - 1; i++)
             for(int j = i; j < names.length; j++)
-                // names[i] > names[j]
+                //names[i] > names[j]
                 if(names[i].compareTo(names[j]) > 0) {
                     String aux = names[j];
                     names[j] = names[i];

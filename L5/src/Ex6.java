@@ -13,6 +13,7 @@ public class Ex6 {
     }
 
     public static boolean palindromeR(String s, int i) {
+        if(i > s.length() / 2) return true;
         if(s.charAt(i) != s.charAt(s.length() - 1 - i)) return false;
         else return palindromeR(s, i + 1);
     }
@@ -21,5 +22,11 @@ public class Ex6 {
         System.out.println(palindrome("abccba"));
         System.out.println(palindrome("aba"));
         System.out.println(palindrome("abc"));
+
+        System.out.println();
+
+        System.out.println(palindromeR("abccba", 0));
+        System.out.println(palindromeR("aba", 0));
+        System.out.println(palindromeR("abc", 0));
     }
 }
